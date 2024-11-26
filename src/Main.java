@@ -45,6 +45,7 @@ public class Main {
         Carrello carrello = new Carrello();
         try{
             carrello.aggiungiProdotto(catalogo.cercaProdotto(1));
+            carrello.aggiungiProdotto(catalogo.cercaProdotto("I promessi sposi"));
             System.out.println(carrello.calcolaImporto());
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
