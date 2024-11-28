@@ -25,8 +25,10 @@ public class Catalogo {
 
     public void eliminaProdotto(String titolo) throws ProdottoInesistente {
         for(Prodotto prodotto : prodotti.values())
-            if(prodotto.getTitolo().equals(titolo))
+            if(prodotto.getTitolo().equals(titolo)) {
                 eliminaProdotto(prodotto.getCodice());
+                return;
+            }
 
         throw new ProdottoInesistente();
     }

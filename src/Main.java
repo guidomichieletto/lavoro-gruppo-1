@@ -34,7 +34,7 @@ public class Main {
                     2010,
                     10.20f,
                     1,
-                    "JK Rowlings",
+                    "JK Rowling",
                     "Test",
                     1.20f
             ));
@@ -55,5 +55,11 @@ public class Main {
             System.out.println(prodotto);
         }
 
+        try{
+            catalogo.eliminaProdotto("Harry Potter e la camera dei segreti");
+            carrello.eliminaProdotto(1);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
     }
 }
